@@ -1,0 +1,99 @@
+.title {
+    margin: 2rem 1rem;
+    display: grid;
+    grid-template-columns: 90%;
+    grid-template-rows: 84px 66px 40px 48px;
+    place-content: center;
+    grid: 12px;
+    button {
+        background-color: $button_background;
+        border: 0px;
+        padding: 13px 96px;
+        box-shadow: $button_shadow;
+        animation: $pulse_animation;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    h1 {
+        font-family: $h1_font;
+        margin-bottom: 0.5rem;
+        font-size: 36px;
+    }
+    h5 {
+        width: 288px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px){
+    .title {
+        gap: 0px;
+        margin-left: 200px;
+        margin-top: 5%;
+        place-content: none;
+        grid-template-columns: 1fr;
+        grid-template-rows: 84px 48px 56px 58px;
+    button {
+        justify-self: flex-start;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        padding: 16px 59px;
+        
+        &:hover {
+            background: $button_hover_background;
+            color: white
+        }
+    }
+    h1 {
+        justify-self: flex-start;
+        font-size: 52px;
+    }
+    h5 {
+        justify-self: flex-start;
+        font-size: 16px;
+        width: 628px;
+    }
+    }   
+}
+
+@media (min-width: 1011px){
+    .title {
+        gap: 0px;
+        margin-left: 200px;
+        margin-top: 5%;
+        place-content: none;
+        grid-template-columns: 1fr;
+        grid-template-rows: 84px 48px 56px 58px;
+    button {
+        justify-self: flex-start;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        padding: 16px 59px;
+        
+        &:hover {
+            background: $button_hover_background;
+            color: white
+        }
+    }
+    h1 {
+        justify-self: flex-start;
+        font-size: 64px;
+    }
+    h5 {
+        justify-self: flex-start;
+        font-size: 16px;
+        width: 628px;
+    }
+    }   
+}
+
+
+.bluedot {
+    color: #0000EC 100%;
+    &:before {
+        content: "";
+        background-color: blue;
+        width: 3%;
+        height: 3%;
+    }
+}

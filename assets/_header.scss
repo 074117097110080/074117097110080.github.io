@@ -1,0 +1,133 @@
+header{
+    background-color: white;
+    img {
+        margin: 1rem 2rem;
+        float: left;
+        width: 2rem;
+        &:hover  {
+        animation: $logo_animation;
+        }
+    }
+    input {
+        display: none;
+    }
+    nav {
+        ul {
+            background-color: blue;
+            color: white;
+            max-height: 0px;
+            display: flex;
+            list-style: none;
+            flex-flow: column;
+            width: 100%;
+            padding-left: 1rem;
+            transition: max-height 0.2s ease-out;
+            li {
+                padding: 10px 0px;
+                a {
+                    font-size: 14px;
+                    &:active {
+                        text-decoration: line-through;
+                    }
+            }
+            }
+        }
+    }
+    label{
+        float: right;
+        cursor: pointer;
+        span {
+            display: block;
+            position: relative;
+            content: "";
+            width: 20px;
+            height: 2px;
+            background-color: black;
+            margin: 1.4rem 1rem; 
+            transition: background-color .2s;
+            &::before{
+                display: block;
+                position: absolute;
+                content: "";
+                top:  -5px;
+                width: 100%;
+                height: 100%;
+                background-color: inherit;
+                transition: $xform_animation;
+            }
+            &::after{
+                display: block;
+                position: absolute;
+                content: "";
+                bottom: -5px;
+                width: 100%;
+                height: 100%;
+                background-color: inherit;
+                transition: $xform_animation;
+            }
+        }
+    }
+}
+
+
+/* Selects every <ul> element that is preceded by a element */
+header input:checked ~ nav ul{
+    max-height: 240px;
+}
+header input:checked ~ label span{
+    background-color: transparent;
+}
+header input:checked ~ label span::before{
+    transform: rotate(-45deg);
+    background-color: darkblue;
+    top: 0;
+}
+header input:checked ~ label span::after{
+    transform: rotate(45deg);
+    background-color: darkblue;
+    top: 0;
+}
+
+@media (min-width: 768px){
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        label{
+            display: none;
+        }
+        img {
+            margin-left: 100px;
+        }
+        nav{
+            ul{
+                flex-flow: row;
+                max-height: unset;
+                background-color: transparent;
+                margin: 1rem 4rem;
+                overflow: hidden;
+                width: auto;
+                >li {
+                    display: inline-block;
+                    margin: 1rem;
+                    &:hover {
+                        color: $button_background;
+                        text-decoration: line-through;
+                    }
+                    a {
+                        color: #000;
+                        font-size: 16px;
+                        &:active {
+                            text-decoration: line-through;
+                        }
+                        &:hover {
+                            color: $button_background;
+                            text-decoration: line-through;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

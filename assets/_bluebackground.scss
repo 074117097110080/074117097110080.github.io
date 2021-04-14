@@ -1,0 +1,43 @@
+.backcolour-top {
+    background: $gallery_background;
+    padding: 1rem 0rem;
+    transform: skewY(-5deg);
+    z-index: -5;
+    position: absolute;
+    height: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.backcolour-bottom {
+    background: $gallery_background;
+    padding: 1rem 0rem;
+    transform: skewY(-5deg);
+    z-index: -5;
+    position: absolute;
+    height: 300px;
+    width: 100%;
+    margin-top: 10%;
+}
+
+@media (min-width: 768px){
+    .backcolour-bottom {
+        margin: 0 auto;
+        background: $gallery_background;
+        padding: 1rem 0rem;
+        transform: skewY(-5deg);
+        z-index: -5;
+        position: absolute;
+        height: 490px;
+        width: 100%;
+    }
+    .backcolour-top {
+        background: $gallery_background;
+        padding: 1rem 0rem;
+        transform: skewY(-5deg);
+        z-index: -5;
+        position: absolute;
+        height: 800px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}

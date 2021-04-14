@@ -1,0 +1,19 @@
+.guestgallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(autofill,1fr);
+    img {
+        width: 100%;
+        border: -1px;
+        display: flex;
+        justify-self: center;
+    }
+}
+
+@media (min-width: 768px){
+    .guestgallery {
+        width: 100%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}

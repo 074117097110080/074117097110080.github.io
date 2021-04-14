@@ -1,0 +1,30 @@
+.h2container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin-left: 13.9%;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 1.5%;
+    h2 {
+        color: $font_color;
+        font-family: $h1_font;
+        font-size: 36px;
+    }
+    #episodes {
+        margin-top: 5%;
+        color: #fff;
+    }
+}
+
+@media (min-width: 768px){
+    .h2container {
+        margin-left: 13.9%;
+        margin-right: 5%;
+        h2 {
+            color: $font_color;
+            font-family: $h1_font;
+            font-size: 48px;
+        }
+    }
+}

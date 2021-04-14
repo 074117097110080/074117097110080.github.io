@@ -1,0 +1,33 @@
+@import "variables";
+@import "header";
+@import "animations";
+@import "titlebox";
+@import "spotify";
+@import "galleria";
+@import "some-of-our-themes";
+@import "footer";
+@import "h2text";
+@import "bluebackground";
+@import "lastnews";
+@import "phone";
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: $general_font;
+}
+
+a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: line-through;
+}
+
+body {
+    width: 100%;
+}
