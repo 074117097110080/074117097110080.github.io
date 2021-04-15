@@ -96,6 +96,11 @@ header label span::after {
   transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
 }
 
+a:active {
+  text-decoration: line-through;
+  color: rgba(6, 10, 36, 0.56);
+}
+
 /* Selects every <ul> element that is preceded by a element */
 header input:checked ~ nav ul {
   max-height: 240px;
@@ -299,7 +304,7 @@ header input:checked ~ label span::after {
 @media (min-width: 768px) {
   .title {
     gap: 0px;
-    margin-left: 200px;
+    margin-left: 15%;
     margin-top: 5%;
     place-content: none;
     -ms-grid-columns: 1fr;
