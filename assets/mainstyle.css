@@ -40,6 +40,7 @@ header nav ul {
 }
 
 header nav ul li {
+  width: 90%;
   padding: 10px 0px;
 }
 
@@ -368,14 +369,7 @@ header input:checked ~ label span::after {
 }
 
 .bluedot {
-  color: #0000EC 100%;
-}
-
-.bluedot:before {
-  content: "";
-  background-color: blue;
-  width: 3%;
-  height: 3%;
+  color: #0000EC;
 }
 
 .spotify {
@@ -768,25 +762,21 @@ footer div .social-media {
 }
 
 .aboutusphone {
-  display: -ms-grid;
-  display: grid;
-  margin: 1rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100%;
-  -ms-grid-columns: 10% 80% 10%;
-      grid-template-columns: 10% 80% 10%;
-  -ms-grid-rows: 20% 20% 20% 20% 20%;
-      grid-template-rows: 20% 20% 20% 20% 20%;
-  place-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .aboutusphone img {
-  width: 110%;
-  -ms-grid-row: 1;
-      grid-row-start: 1;
-  grid-row-end: 4;
-  -ms-grid-column: 1;
-      grid-column-start: 1;
-  grid-column-end: 3;
+  width: 90%;
   z-index: 2;
   margin-top: 80px;
 }
@@ -799,15 +789,8 @@ footer div .social-media {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-grid-row: 5;
-      grid-row-start: 5;
-  grid-row-end: 7;
-  -ms-grid-column: 2;
-      grid-column-start: 2;
-  grid-column-end: 3;
-  -ms-flex-item-align: center;
-      align-self: center;
   margin-bottom: 2rem;
+  padding: 0 10%;
 }
 
 .aboutusphone div h2 {
@@ -824,62 +807,24 @@ footer div .social-media {
 }
 
 @media (min-width: 540px) {
-  .aboutusphone div {
-    -ms-grid-row: 5;
-        grid-row-start: 5;
-    grid-row-end: 6;
+  .aboutusphone img {
+    padding: 2%;
   }
 }
 
 @media (min-width: 768px) {
   .aboutusphone {
-    -ms-grid-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-        grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-    -ms-grid-rows: 10% 10% 10% 10% 10% 10%;
-        grid-template-rows: 10% 10% 10% 10% 10% 10%;
     margin-bottom: 0px;
   }
   .aboutusphone img {
-    width: 120%;
-    -ms-grid-column: 2;
-        grid-column-start: 2;
-    grid-column-end: 5;
-    -ms-grid-row: 1;
-        grid-row-start: 1;
-    grid-row-end: 3;
+    width: 80%;
     margin-top: 20px;
-  }
-  .aboutusphone div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-grid-column: 6;
-        grid-column-start: 6;
-    grid-column-end: 10;
-    -ms-grid-row: 4;
-        grid-row-start: 4;
-    grid-row-end: 5;
   }
 }
 
 @media (min-width: 900px) {
-  .aboutusphone {
-    -ms-grid-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-        grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-    -ms-grid-rows: 10% 10% 10% 10% 10% 10% 10%;
-        grid-template-rows: 10% 10% 10% 10% 10% 10% 10%;
-  }
   .aboutusphone img {
-    -ms-grid-column: 2;
-        grid-column-start: 2;
-    grid-column-end: 5;
-    -ms-grid-row: 1;
-        grid-row-start: 1;
-    grid-row-end: 3;
+    width: 70%;
   }
   .aboutusphone div {
     display: -webkit-box;
@@ -889,12 +834,6 @@ footer div .social-media {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -ms-grid-column: 6;
-        grid-column-start: 6;
-    grid-column-end: 9;
-    -ms-grid-row: 4;
-        grid-row-start: 4;
-    grid-row-end: 6;
   }
   .aboutusphone div h2 {
     font-size: 48px;
@@ -904,22 +843,18 @@ footer div .social-media {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1180px) {
   .aboutusphone {
-    -ms-grid-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-        grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-    -ms-grid-rows: 10% 10% 10% 10% 10% 10% 10%;
-        grid-template-rows: 10% 10% 10% 10% 10% 10% 10%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 5%;
+    padding: 0 10%;
   }
   .aboutusphone img {
-    width: 100%;
-    margin-left: 5rem;
-    -ms-grid-column: 2;
-        grid-column-start: 2;
-    grid-column-end: 5;
-    -ms-grid-row: 1;
-        grid-row-start: 1;
-    grid-row-end: 2;
+    width: 45%;
+    padding: 0;
   }
   .aboutusphone div {
     display: -webkit-box;
@@ -929,12 +864,6 @@ footer div .social-media {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -ms-grid-column: 6;
-        grid-column-start: 6;
-    grid-column-end: 9;
-    -ms-grid-row: 4;
-        grid-row-start: 4;
-    grid-row-end: 5;
   }
   .aboutusphone div h2 {
     font-size: 48px;

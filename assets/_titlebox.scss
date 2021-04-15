@@ -89,11 +89,5 @@
 
 
 .bluedot {
-    color: #0000EC 100%;
-    &:before {
-        content: "";
-        background-color: blue;
-        width: 3%;
-        height: 3%;
-    }
+    color: #0000EC;
 }
